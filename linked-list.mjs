@@ -71,7 +71,7 @@ export const LinkedList=(function(){
         if(currentIndex==index){
             return current;
         }else{
-            console.log("index is not present in the linked list");
+           return "index is not present in the linked list";
         }
 
         }
@@ -84,7 +84,7 @@ export const LinkedList=(function(){
             headNode=null;
             tailNode=null;
         }else{
-            current=headNode;
+            let current=headNode;
             while(current.nextNode!=tailNode){
                 current=current.nextNode;
             }
@@ -105,7 +105,7 @@ export const LinkedList=(function(){
         }else{
             let current=headNode;
             while(current.nextNode!=null){
-                let current=current.nextNode;
+                current=current.nextNode;
                 if(current.value==value){
                     flag=true;
                 }
