@@ -1,4 +1,4 @@
-import { Node } from "./node";
+import { Node } from "./node.mjs";
 
 export const LinkedList=(function(){
 
@@ -141,6 +141,30 @@ export const LinkedList=(function(){
 
     //toString represents your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> null
     //make a function to create each individual value block and append them through a while loop
+    function toString(){
+        let string='';
+        if(headNode==null&&tailNode==null){
+            string+='null';
+        }
+        if(headNode!=null&&headNode==tailNode){
+            string+=`${valueBlock(headNode)}null`;
+        }
+        else{
+            let current=headNode;
+            string+=`${valueBlock(headNode)}`;
+            while(current.nextNode!=null){
+                current=current.nextNode;
+                string+=`${valueBlock(current)}`;
+            }
+            string+='null';
+        }
+        console.log(string);
+    }
+
+    //value block rendering function
+    function valueBlock(currentNode){
+        return `(${currentNode.value}) -> `;
+    }
 
 
     return{
@@ -153,6 +177,6 @@ export const LinkedList=(function(){
         pop,
         contains,
         find,
-
+        toString
     }
 })();
