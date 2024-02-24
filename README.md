@@ -34,7 +34,7 @@ Build the following functions in your linked list class / factory:
 10. toString represents your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> null
 
 
-
+(Might do the extra credit at some point later on)
 Extra credit
 1. insertAt(value, index) that inserts a new node with the provided value at the given index.
 2. removeAt(index) that removes the node at the given index.
